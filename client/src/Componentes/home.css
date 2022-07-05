@@ -1,0 +1,39 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    grid-auto-rows: minmax(100px, auto);
+    padding: 10px;
+
+
+}
+
+.back {
+
+    background: #8ba987 url('../images/fondo.jpeg') no-repeat center center;
+    background-size: 100% 100%;
+
+}
+
+.imgCreate {
+    max-width: 120px;
+    max-height: 1200px;
+}
+
+.click {
+    margin: 10px
+}
+
+.padre {
+    display: flex;
+
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+}
+
+.Search-Bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

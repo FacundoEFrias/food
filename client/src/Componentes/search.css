@@ -1,0 +1,34 @@
+.search-container {
+    float: right;
+}
+
+.input {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+}
+
+.search-container-Input {
+    float: right;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #8A2BE2;
+    color: white;
+    font-size: 17px;
+
+    border: none;
+    cursor: pointer;
+}
+
+.search-container-Input:hover {
+    background: #ccc;
+}
+
+.Search-Bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}

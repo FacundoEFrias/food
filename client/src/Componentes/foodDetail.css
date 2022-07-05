@@ -1,0 +1,85 @@
+.backDetail {
+
+    background: #8ba987 url('../images/Fondo-Details.avif') no-repeat center center;
+    background-size: 100% 100%;
+
+
+}
+
+.contenedor {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.contenedor2 {
+    width: 40%;
+    height: 40%;
+    margin: 10px;
+
+
+    background-color: #84ebfb;
+    border-radius: 20px;
+    opacity: 0.9;
+}
+
+.img {
+    width: 45%;
+    height: 45%;
+    border-radius: 20px;
+
+}
+
+
+
+.title {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 25px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: #0473faf1;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    padding-left: 20px;
+}
+
+.diets {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 18px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: rgb(255, 0, 144);
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    padding-left: 20px;
+}
+
+.health {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 18px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: #028625e8;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    padding-left: 20px;
+}
+
+.summary {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 25px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: #fc080ce8;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    padding-left: 20px;
+}

@@ -1,0 +1,25 @@
+.back3 {
+    background: #8ba987 url('../images/fondo.jpeg') no-repeat center center;
+    background-size: 100% 100%;
+    padding: 174px;
+}
+
+.titulo1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 80px;
+
+
+
+
+}
+
+.Recetas {
+    font-family: 'Roboto', sans-serif;
+    font-size: 80px;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.button3 {
+    padding-bottom: 100px;
+}
