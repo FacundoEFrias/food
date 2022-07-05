@@ -8,7 +8,7 @@ const { API_KEY } = process.env;
 
 const router = Router();
 
-let diets = [{name: 'gluten free'},{name: 'ketogenic'},{name: 'vegetarian'},{name: 'lacto-vegetarian'},
+let diets = [{name: 'gluten Free'},{name: 'ketogenic'},{name: 'vegetarian'},{name: 'lacto-vegetarian'},
 	{name: 'lacto ovo vegetarian'},{name: 'vegan'},{name: 'pescatarian'},{name: 'paleolithic'},{name: 'primal'},
 	{name: 'whole 30'}];
 
@@ -18,8 +18,8 @@ router.get("/", async (req, res,next) => {
             where: {name: e.name}
         })})
      let allDiet = await Diet.findAll()
-
-     res.send(allDiet.map(e=>{e.name}))
+     
+     res.send(allDiet)
     
 })
 

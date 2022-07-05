@@ -38,15 +38,18 @@ router.get("/", async (req, res,next) => {
                 title: e.title,
                 image: e.image,
                 healthScore: e.healthScore,
-                type: e.dishTypes,
-                diets: e.diets 
+                type: e.dishTypes.map(e=> {return {name : e}}),
+                diets: e.diets.map(e=> {return {name : e}})
             }
             return recipe; })
-        let allName = [...nameApiTodos,...recipes]
+        let allApiName = [...nameApiTodos]
 
-        let allName2 = allName.filter(e=>e.title.includes(name.replace(/^./, name[0].toUpperCase())) || e.title.includes(name.toLocaleLowerCase()))
+        let allApiName2 = allApiName.filter(e=>e.title.includes(name) || e.title.toUpperCase().includes(name)|| e.title.toLowerCase().includes(name))
+        let all = [...allApiName2,...recipes]
+
+        let AllApi = allApiName.sort((a, b) => a.title.localeCompare(b.title))
         
-        res.send(name ? allName2 : recipes)
+        res.send(all.length === 0 ? AllApi : all )
     }else{
         const recipes = await Recipe.findAll({
             include: {
@@ -66,16 +69,18 @@ router.get("/", async (req, res,next) => {
                 title: e.title,
                 image: e.image,
                 healthScore: e.healthScore,
-                type: e.dishTypes,
-                diets: e.diets 
+                type: e.dishTypes.map(e=> {return {name : e}}),
+                diets: e.diets.map(e=> {return {name : e}}) ,
+               
             }
             return recipe
         })
         
-        let nameApi2 = nameApiTodos.sort((a, b) => a.title.localeCompare(b.title))
-        let nameDb2 = recipes.sort((a, b) => a.name.localeCompare(b.name))
-        let nameTotal = [...nameApi2,...nameDb2]
-        res.send(nameTotal)
+        
+      
+        let nameTotal = [...nameApiTodos,...recipes]
+        let nameTotal2 = nameTotal.sort((a, b) => a.title.localeCompare(b.title))
+        res.send(nameTotal2)
     }
     
 }catch(e){
@@ -99,7 +104,7 @@ router.get("/:id",async(req,res,next)=>{
                         healthScore: idDb.healthScore,
                         type: idDb.type,
                         summary: idDb.summary,
-                        diets: idDb.diets.map(p => p.name).join(', '),
+                        diets: idDb.diets,
                         analyzedInstructions: idDb.analyzedInstructions
                 }
                 res.send(info)
@@ -111,14 +116,14 @@ router.get("/:id",async(req,res,next)=>{
             title: e.title,
             image: e.image,
             healthScore: e.healthScore,
-            type: e.type,
+            type: e.dishTypes.map(e=> {return {name : e}}),
             summary: e.summary,
-            diets: e.diets.map(p => p.name).join(', '),
+            diets: e.diets.map(e=> {return {name : e}}),
             analyzedInstructions: e.analyzedInstructions
     }
-    res.send(info)
+    res.send(info ? info : "not found")
     } }catch (error) {
-        
+        next(error)
     }})
 
 

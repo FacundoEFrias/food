@@ -14,11 +14,11 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    Image:{
+    image:{
       type: DataTypes.STRING,
     },
     summary:{
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
     },
     healthScore:{
