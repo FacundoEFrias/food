@@ -44,7 +44,7 @@ function FoodDetails() {
             <h4 className="summary">Summary:</h4>
             <h4 dangerouslySetInnerHTML={{__html: idFood.summary}}></h4>
             
-            {idFood.analyzedInstructions.length ? <h4 className="summary">Step by Step:</h4> : null} 
+            {idFood.analyzedInstructions && idFood.analyzedInstructions.length ? <h4 className="summary">Step by Step:</h4> : null} 
   
             {idFood.analyzedInstructions ? <h4 > {Array.isArray(idFood.analyzedInstructions) ? idFood.analyzedInstructions.map(e => e.steps.map(f => f.step)) : idFood.analyzedInstructions }</h4>:null}
           </div>

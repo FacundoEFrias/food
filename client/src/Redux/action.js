@@ -12,7 +12,7 @@ export const FILTER_TYPE = "FILTER_TYPE"
 
 export function allFood(){
     return function(dispatch){
-        axios.get("http://localhost:3001/api/recipes/")
+        axios.get("api/recipes/")
         .then((resp)=>{
             dispatch({
                 type: ALL_FOOD,
@@ -27,7 +27,7 @@ export function allFood(){
 
 export function AllSearch(name){
     return function(dispatch){
-        axios.get(`http://localhost:3001/api/recipes?name=${name}`)
+        axios.get(`api/recipes?name=${name}`)
         .then((res)=>{
             dispatch({
                 type: SEARCH,
@@ -42,7 +42,7 @@ export function AllSearch(name){
 }
 export  function AllID(id){
     return function(dispatch){
-        axios.get(`http://localhost:3001/api/recipes/${id}`)
+        axios.get(`api/recipes/${id}`)
         .then((res)=>{
             dispatch({
                 type: ID_ALL,
@@ -67,7 +67,7 @@ export function SortHead(order){
 }
 export function TypeDiet(){
     return function(dispatch){
-        axios.get("http://localhost:3001/api/types")
+        axios.get("api/types")
         .then((res)=>{
            dispatch(
             {type: TYPE_DIET,
@@ -87,7 +87,7 @@ export function FilterDiet(order){
 }
 export function PostRecipe(data){
      return async function(dispatch){
-        const respon = axios.post("http://localhost:3001/api/create/", data)
+        const respon = axios.post("api/create/", data)
         return respon
         .catch((error)=>{
             console.log(error)

@@ -61,9 +61,10 @@ export default function Home() {
                 <Paginacion pagina={pagina} setPagina={setPagina} maximo={maximo} />
             </div>
             <br />
+            {all_Food.length > 0  ?
             <div className="wrapper" >
                 {
-                  all_Food   && all_Food.slice((pagina - 1) * porPagina, (pagina - 1) * porPagina + porPagina).map(e => {
+                    all_Food && all_Food.slice((pagina - 1) * porPagina, (pagina - 1) * porPagina + porPagina).map(e => {
                         return <Card 
                             key={e.id}
                             id={e.id}
@@ -75,9 +76,10 @@ export default function Home() {
 
 
 
-                    })
+                    }) 
                 }
-            </div>
+            </div>: <img className="imgError" src="https://media2.giphy.com/media/L1ge3nIyrXt6/giphy.gif?cid=790b7611a5f8238350d73171d81e9cae7412cd7713d95402&rid=giphy.gif&ct=g" alt="Error"></img>
+            }
         </div>
 
     )

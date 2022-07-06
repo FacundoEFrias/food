@@ -37,3 +37,9 @@
     justify-content: center;
     align-items: center;
 }
+
+.imgError {
+    height: 25%;
+    width: 25%;
+    border-radius: 10px;
+}
