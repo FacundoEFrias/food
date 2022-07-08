@@ -49,7 +49,7 @@ router.get("/", async (req, res,next) => {
 
         let AllApi = allApiName.sort((a, b) => a.title.localeCompare(b.title))
         
-        res.send(all.length === 0 ? AllApi : all )
+        res.send(all.length === 0 ? "No encontre nada" : all )
     }else{
         const recipes = await Recipe.findAll({
             include: {
