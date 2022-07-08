@@ -16,7 +16,7 @@ function FoodDetails() {
 
     useEffect(()=>{
         dispatch(AllID(id))
-    },[dispatch])
+    },[dispatch]) 
 
     let idFood = useSelector(state => state.FoodDetails) 
     
@@ -42,7 +42,7 @@ function FoodDetails() {
            
             
             <h4 className="summary">Summary:</h4>
-            <h4 dangerouslySetInnerHTML={{__html: idFood.summary}}></h4>
+            <h4 dangerouslySetInnerHTML={{__html: idFood.summary}}></h4> 
             
             {idFood.analyzedInstructions && idFood.analyzedInstructions.length ? <h4 className="summary">Step by Step:</h4> : null} 
   

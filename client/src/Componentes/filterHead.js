@@ -8,10 +8,11 @@ export const HeadDown = "HeadDown"
 export const ALL = "ALL"
 
 
-function FilterHead() {
+function FilterHead({setPagina}) {
     let dispatch = useDispatch()
     function onChangeHead(e){
         dispatch(SortHead(e.target.value))
+        setPagina(1)
     }
   return (
     <div className="select" >

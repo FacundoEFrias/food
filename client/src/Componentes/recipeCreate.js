@@ -2,7 +2,7 @@ import React from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { useEffect } from "react"
 import { useState } from "react"
-import {PostRecipe, TypeDiet} from "../Redux/action"
+import {allFood, PostRecipe, TypeDiet} from "../Redux/action"
 import "./recipeCreate.css"
 import { Link, useNavigate } from "react-router-dom"
 
@@ -52,8 +52,12 @@ function RecipeCreate() {
    
      function handleSubmit(e) {
         e.preventDefault()
+        if(!title.title) {return alert("please put the title of the recipe")}
+        if(!title.summary) {return alert("please put the summary of the recipe")}
+        if(!title.healthScore) {return alert("please put the healthScore of the recipe")}
         dispatch(PostRecipe(title))
-        alert("Recipe Created")
+        dispatch(allFood())
+        alert(`Recipe Created ${setTitle.name}`)
         
         setTitle({
             title: "",
@@ -111,7 +115,7 @@ function RecipeCreate() {
             </label>
            
             <label className="label1">
-                Diet:
+                Diets:
                 <div className="DietInput" onChange={(e) => handleSelect(e)}>
                     {TypeDiet1.map((die) => (
                         <div key={die.name}>
@@ -130,10 +134,10 @@ function RecipeCreate() {
                 <input className="textarea" type="text" name="analyzedInstructions" value={title.analyzedInstructions} onChange={handleChange}/>
             </label>
             
-            {error.hasOwnProperty('title') || error.hasOwnProperty('summary')  || error.hasOwnProperty('healthScore') ?  <p className="error1"> please complete all the inputs to create your recipe</p> : <button  type='submit'> Create Recipe</button>  }
+             {error.hasOwnProperty("title")|| error.hasOwnProperty("summary")|| error.hasOwnProperty("healthScore")? <p className="error1">Enter all required inputs</p>:<button  type='submit'> Create Recipe</button> }
                
-        </form>  
-        </div>      
+        </form>
+        </div>
         </div>
     </div>
     
@@ -142,6 +146,4 @@ function RecipeCreate() {
 
 export default RecipeCreate
 
-//Arreglar diet que vegetariano no se puede seleccionar
-//verificar el formulario
-//en descricpcion de la receta que se arregle sumario
+

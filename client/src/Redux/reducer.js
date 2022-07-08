@@ -1,3 +1,4 @@
+
 import { AZ } from "../Componentes/filterAz";
 import { ALL, HeadDown } from "../Componentes/filterHead";
 import { ALLTYPE } from "../Componentes/FilterType";
@@ -20,6 +21,10 @@ const rootReducer = (state = initialState, action) => {
                 Foods: action.payload
             }
         case SEARCH:
+            if(typeof action.payload === "string"){
+                 alert("Not Found the recipes");
+                 return {...state}
+                  }
             return {
                 ...state,
                 Food: action.payload

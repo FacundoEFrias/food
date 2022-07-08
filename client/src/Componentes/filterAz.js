@@ -6,10 +6,11 @@ import "./filterAz.css"
 export const AZ = "AZ"
 export const ZA= "ZA"
 
-function FilterAz() {
+function FilterAz({setPagina}) {
     let dispatch = useDispatch()
     function handleChangeSort(e){
         dispatch(AllSort(e.target.value))
+        setPagina(1)
     }
   return (
     <div className='select'>

@@ -8,10 +8,10 @@ import { FilterDiet } from '../Redux/action'
 
 
 export const ALLTYPE = "ALLTYPE"
-export const VEGETARIAN = "vegetarian"
 
 
-function FilterType() {
+
+function FilterType({setPagina}) {
   
     let dispatch = useDispatch()
 
@@ -20,6 +20,7 @@ function FilterType() {
 
     function handleOnChangeType(e){
         dispatch(FilterDiet(e.target.value))
+        setPagina(1)
     }
     
   return (

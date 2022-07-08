@@ -20,7 +20,7 @@ export default function Card({ id, title, image, diets, healthScore }) {
                     <h2 >{title}</h2>
                     
                     {diets ? <h3 className="h3">Diets: {diets}</h3> : null}
-                    <h3 className="Head">healthScore: {healthScore}</h3>
+                    <h3 className="Head">Health Score: {healthScore}</h3>
 
                 </Link>
 

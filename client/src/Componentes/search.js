@@ -17,10 +17,11 @@ function Search() {
         e.preventDefault()
         setSearch(e.target.value)
     }
+   
   
   return (
     <div className='Search-Bar'>
-    <form className="search-container " onSubmit={e=>handleSubmit(e)}  >
+    <form className="search-container " onSubmit={e=>handleSubmit(e) }  >
 
         <input className='input' type="text" onChange={(e) => onInputChange(e)} placeholder="Search..." value={search} />
         <input className="search-container-Input" type="submit" value="Search" />

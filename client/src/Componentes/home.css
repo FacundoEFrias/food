@@ -6,6 +6,7 @@
     padding: 10px;
 
 
+
 }
 
 .back {
@@ -16,18 +17,24 @@
 }
 
 .imgCreate {
-    max-width: 120px;
-    max-height: 1200px;
+    max-width: 100px;
+    max-height: 1000px;
+    padding-bottom: 50px;
+    padding-right: 20px;
 }
 
-.click {
-    margin: 10px
+.click1 {
+
+    margin: 20px;
+    padding-bottom: 10px;
 }
 
 .padre {
     display: flex;
-
+    margin: 10px;
+    padding-bottom: 30px;
     justify-content: space-around;
+
     align-items: center;
     height: 200px;
 }
@@ -36,10 +43,28 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 20px;
 }
 
 .imgError {
     height: 25%;
     width: 25%;
+    padding: 30px;
     border-radius: 10px;
+
+
+}
+
+.refresh1 {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+.buttonRefresh {
+    padding-bottom: 50px;
+    padding-right: 20px;
 }

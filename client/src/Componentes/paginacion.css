@@ -1,9 +1,16 @@
 .click {
-    margin: 10px
+
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 10px;
+
 }
 
-button {
-    background: linear-gradient(-45deg, #3f00b5, #9f69fe, #27c8b7, #3f00b5);
+.button1 {
+    background: linear-gradient(90deg, rgba(9, 198, 247, 1) 0%, rgba(220, 249, 14, 1) 35%, rgba(127, 175, 241, 1) 92%);
+    ;
     background-size: 800% 400%;
     padding: 1em 2em;
     display: inline-block;
@@ -14,15 +21,54 @@ button {
     color: white;
     transition: all .5s ease-in-out;
     animation: gradient 10s infinite cubic-bezier(.62, .28, .23, .99) both;
-    margin: 10px
+
 }
 
-button:hover {
+.button1:hover {
     animation: gradient 3s infinite;
     transform: scale(1.05);
 }
 
-button:active {
+.button1:active {
+    animation: gradient 3s infinite;
+    transform: scale(0.8);
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.button2 {
+    background: linear-gradient(-45deg, #3f00b5, #9f69fe, #27c8b7, #3f00b5);
+    background-size: 800% 400%;
+    padding: 1em 1em;
+    display: inline-block;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 700;
+    color: white;
+    transition: all .5s ease-in-out;
+    animation: gradient 10s infinite cubic-bezier(.62, .28, .23, .99) both;
+
+}
+
+.button2:hover {
+    animation: gradient 3s infinite;
+    transform: scale(1.05);
+}
+
+.button2:active {
     animation: gradient 3s infinite;
     transform: scale(0.8);
 }
