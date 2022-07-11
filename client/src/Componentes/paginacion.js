@@ -19,7 +19,7 @@ export const Paginacion = ({ porPagina, pagina, all_Food, paginado, setPagina, m
     return (
         <nav>
             <ul className='click'>
-            <button className='button1' disabled={pagina === Math.ceil(maximo) || pagina > Math.ceil(maximo)} onClick={onNextClick}>Next</button>
+            <button className='button1' disabled={pagina === 1 || pagina < 1} onClick={onPrevClick}> Prev</button>
                 
                 {pageNumbers.map(num => {
                     return (
@@ -31,7 +31,8 @@ export const Paginacion = ({ porPagina, pagina, all_Food, paginado, setPagina, m
                     </li>
                     )
                 })}
-                <button className='button1' disabled={pagina === 1 || pagina < 1} onClick={onPrevClick}> Prev</button>
+                <button className='button1' disabled={pagina === Math.ceil(maximo) || pagina > Math.ceil(maximo)} onClick={onNextClick}>Next</button>
+                
                 
             </ul>           
         </nav>        
