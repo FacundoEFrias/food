@@ -35,7 +35,9 @@ export const Paginacion = ({ porPagina, pagina, all_Food, paginado, setPagina, m
                 
                 
             </ul>           
+            <span className="button2">{`Actual Page  ${pagina}`} </span>
         </nav>        
+        
     )
 }
 
