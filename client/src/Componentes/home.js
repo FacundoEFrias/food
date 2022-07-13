@@ -73,9 +73,9 @@ export default function Home() {
             
             </div>
             
-
+            {all_Food.length > 0  ?
             <div className="wrapper" >
-                {all_Food.length > 0  ?
+                {
                     currentRecetas.map(e => {
                         return <Card 
                             key={e.id}
@@ -88,9 +88,9 @@ export default function Home() {
 
 
 
-                    }): <img className="imgError" src="https://media2.giphy.com/media/L1ge3nIyrXt6/giphy.gif?cid=790b7611a5f8238350d73171d81e9cae7412cd7713d95402&rid=giphy.gif&ct=g" alt="Error"></img>
+                    })
                 }
-            </div>
+            </div>: <img className="imgError" src="https://media2.giphy.com/media/L1ge3nIyrXt6/giphy.gif?cid=790b7611a5f8238350d73171d81e9cae7412cd7713d95402&rid=giphy.gif&ct=g" alt="Error"></img>}
             <div className="click">
 {
             <Paginacion
