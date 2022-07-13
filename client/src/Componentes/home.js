@@ -73,27 +73,9 @@ export default function Home() {
             
             </div>
             
-            <div className="click">
-{all_Food.length > 0  ?
-            <Paginacion
-            
-            porPagina={porPagina}
-            all_Food={all_Food.length}
-            pagina={pagina}
-            paginado={paginado}
-            setPagina={setPagina}
-            maximo={maximo}
-            />
-            : <img className="imgError" src="https://media2.giphy.com/media/L1ge3nIyrXt6/giphy.gif?cid=790b7611a5f8238350d73171d81e9cae7412cd7713d95402&rid=giphy.gif&ct=g" alt="Error"></img>
-            }
-            </div>
-           
-           
-          
-            
-            
+
             <div className="wrapper" >
-                {
+                {all_Food.length > 0  ?
                     currentRecetas.map(e => {
                         return <Card 
                             key={e.id}
@@ -106,8 +88,22 @@ export default function Home() {
 
 
 
-                    }) 
+                    }): <img className="imgError" src="https://media2.giphy.com/media/L1ge3nIyrXt6/giphy.gif?cid=790b7611a5f8238350d73171d81e9cae7412cd7713d95402&rid=giphy.gif&ct=g" alt="Error"></img>
                 }
+            </div>
+            <div className="click">
+{
+            <Paginacion
+            
+            porPagina={porPagina}
+            all_Food={all_Food.length}
+            pagina={pagina}
+            paginado={paginado}
+            setPagina={setPagina}
+            maximo={maximo}
+            />
+            
+            }
             </div>
         </div>
 
