@@ -4,7 +4,7 @@
     margin: 0;
     display: flex;
     justify-content: space-around;
-    padding-bottom: 10px;
+
 
 }
 
@@ -16,7 +16,7 @@
     display: inline-block;
     border: none;
     border-radius: 10px;
-    font-size: 17px;
+    font-size: 12px;
     font-weight: 700;
     color: white;
     transition: all .5s ease-in-out;
@@ -55,7 +55,7 @@
     display: inline-block;
     border: none;
     border-radius: 10px;
-    font-size: 17px;
+    font-size: 12px;
     font-weight: 700;
     color: white;
     transition: all .5s ease-in-out;
